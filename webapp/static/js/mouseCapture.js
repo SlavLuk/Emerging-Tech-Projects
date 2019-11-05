@@ -1,10 +1,14 @@
+//Adapted from : https://lamberta.github.io/html5-animation/
+
 window.onload = function() {
+  //set up canvas
   var canvas = document.getElementById("canvas");
   context = canvas.getContext("2d");
   context.strokeStyle = "white";
   context.lineJoin = "round";
   context.lineWidth = 10;
   canvas.style.backgroundColor = "black";
+
   mouse = captureMouse(canvas);
 
   canvas.addEventListener(
@@ -38,6 +42,7 @@ window.onload = function() {
   });
 };
 
+//set up mouse coordinates
 captureMouse = function(element) {
   var mouse = { x: 0, y: 0, event: null },
     body_scrollLeft = document.body.scrollLeft,
