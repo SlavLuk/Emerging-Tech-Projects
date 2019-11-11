@@ -33,13 +33,6 @@ window.onload = function() {
     context.lineTo(mouse.x, mouse.y);
     context.stroke();
   }
-
-  $("#clear-button").click(async function() {
-    context.clearRect(0, 0, 400, 400);
-
-    $(".prediction-text").empty();
-    $("#result_box").addClass("d-none");
-  });
 };
 
 //set up mouse coordinates
