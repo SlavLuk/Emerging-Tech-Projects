@@ -30,10 +30,10 @@
   display: block !important;
 }
 
-#chart_box {
-  background-color: black;
-  padding: 20px;
-  border-radius: 5px;
+#predict{
+	 font-size: 35px;
+	 position:center;
+	
 }
 
 .btn {

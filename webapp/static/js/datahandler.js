@@ -8,7 +8,7 @@ $(function() {
     var imageData = canvas.toDataURL();
 
     $.post("/predict", { image: imageData }, function(data) {
-      $("#predict").text(data);
+      $("#predict").html(data);
     });
   });
 

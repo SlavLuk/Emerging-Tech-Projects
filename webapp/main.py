@@ -27,9 +27,9 @@ def predict():
     imgStr = fl.request.values.get("image") 
     # split a string on comma delimiter and get second element
     subImgStr = imgStr.split(',')[1]
-    # decode string into 
+    # decode string into bytes
     imageBytes = base64.b64decode(subImgStr)
-    # convert bytes into python image 
+    # read bytes into python image 
     pyimg = pyimage.open(io.BytesIO(imageBytes))
     # convert python image into numpy array
     imgArr = np.asarray(pyimg)
@@ -49,10 +49,9 @@ def predict():
     # predict classes
     result = model.predict_classes(img)
 
-    
-    
-    print(result)
 
+
+    # send back to web client
     return fl.make_response(str(result[0]))
 
 
