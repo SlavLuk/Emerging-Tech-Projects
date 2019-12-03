@@ -6,7 +6,7 @@ window.onload = function() {
   context = canvas.getContext("2d");
   context.strokeStyle = "white";
   context.lineJoin = "round";
-  context.lineWidth = 17;
+  context.lineWidth = 20;
   canvas.style.backgroundColor = "black";
 
   mouse = captureMouse(canvas);
